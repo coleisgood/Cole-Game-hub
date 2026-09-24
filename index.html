@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Game Hub</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cole's Game Hub</title>
 
-    .nav {
-      padding: 10px;
-      background: #222;
-    }
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#121212;
+    color:white;
+    text-align:center;
+}
 
-    .nav button {
-      margin-right: 10px;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
+header{
+    background:#1e1e1e;
+    padding:20px;
+}
 
-    iframe {
-      width: 100%;
-      height: calc(100vh - 60px);
-      border: none;
-    }
-  </style>
+h1{
+    margin:0;
+}
+
+.search{
+    margin:20px;
+}
+
+.search input{
+    width:80%;
+    max-width:500px;
+    padding:10px;
+    border-radius:10px;
+    border:none;
+}
+
+.games{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:#222;
+    padding:20px;
+    border-radius:15px;
+    width:220px;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:10px;
+    background:#4caf50;
+    color:white;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.card a:hover{
+    opacity:0.9;
+}
+</style>
 </head>
+
 <body>
 
-<div class="nav">
-  <button onclick="openSite('https://poki.com')">Poki</button>
-  <button onclick="openSite('https://www.coolmathgames.com')">Cool Math Games</button>
-  <button onclick="openSite('https://www.youtube.com')">YouTube</button>
+<header>
+<h1>🎮 Cole's Game Hub</h1>
+<p>Games and videos in one place</p>
+</header>
+
+<div class="search">
+<input type="text" placeholder="Search coming soon...">
 </div>
 
-<iframe id="viewer"></iframe>
+<div class="games">
 
-<script>
-function openSite(url) {
-  document.getElementById('viewer').src = url;
-}
-</script>
+<div class="card">
+<h2>Poki</h2>
+<p>Play browser games.</p>
+<a href="https://poki.com" target="_self">Open</a>
+</div>
+
+<div class="card">
+<h2>Cool Math Games</h2>
+<p>Classic puzzle and arcade games.</p>
+<a href="https://www.coolmathgames.com" target="_self">Open</a>
+</div>
+
+<div class="card">
+<h2>YouTube</h2>
+<p>Watch videos.</p>
+<a href="https://www.youtube.com" target="_self">Open</a>
+</div>
+
+</div>
 
 </body>
 </html>
